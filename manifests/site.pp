@@ -4,6 +4,7 @@ node 'master.puppet.local' {
 }
 
 node 'agent1.puppet.local' {
+  include motd
   $osfamily = $facts['os']['family']
   user {"somerandomusername":
         ensure => present,

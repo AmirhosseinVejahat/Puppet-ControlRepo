@@ -1,6 +1,6 @@
 class motd {
   
-  $root_parition = $facts['partitions'].filter | $key, $value | {
+  $root_partition = $facts['partitions'].filter | $key, $value | {
    $value['mount'] == '/'
    }
    

@@ -4,7 +4,7 @@ class motd {
    $value['mount'] == '/boot'
    }
    
-  File { '/etc/motd',
+  File { '/etc/motd':
           path    =>  '/etc/motd',
           owner   =>  'root',
           group   =>  'root',

@@ -11,7 +11,14 @@ node 'agent1.puppet.local' {
         home => '/var/somerandomusername',
         }
 
-
+  File { '/home/somerandomusername':
+         path => '/home/somerandomusername/yangi.txt',
+	 ensure => file,
+         owner => 'root',
+         group => 'root',
+         mode => '0644',
+	 content => "My System is $facts['os']['family']"
+}
 
 }
 

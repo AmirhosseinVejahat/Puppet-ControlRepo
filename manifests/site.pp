@@ -12,7 +12,7 @@ node 'agent1.puppet.local' {
         }
 
   File { '/home/somerandomusername':
-         path => '/home/somerandomusername/yangi.txt',
+         path => '/var/somerandomusername/yangi.txt',
 	 ensure => file,
          owner => 'root',
          group => 'root',

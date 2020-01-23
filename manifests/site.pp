@@ -4,7 +4,7 @@ node 'master.puppet.local' {
 }
 
 node 'agent1.puppet.local' {
-
+  $osfamily = $facts['os']['family']
   user {"somerandomusername":
         ensure => present,
         managehome => true,
@@ -17,7 +17,7 @@ node 'agent1.puppet.local' {
          owner => 'root',
          group => 'root',
          mode => '0644',
-	 content => "My System is $facts['os']['family']"
+	 content => "My System is ${osfamily}"
 }
 
 }
